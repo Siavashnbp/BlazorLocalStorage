@@ -34,6 +34,7 @@ jobs:
 
       # Restore
       - name: Restore packages
+        working-directory: BlazorLocalStorageManager
         run: dotnet restore BlazorLocalStorageManager.slnx
         
       # Build
