@@ -34,15 +34,15 @@ jobs:
 
       # Restore
       - name: Restore packages
-        run: dotnet restore
+        run: dotnet restore BlazorLocalStorageManager.slnx
         
       # Build
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build BlazorLocalStorageManager.slnx --configuration Release --no-restore
 
       # Tests
       - name: Test
-        run: dotnet test --configuration Release --no-build
+        run: dotnet test BlazorLocalStorageManager.slnx --configuration Release --no-build
 
       # Pack
       - name: Pack
