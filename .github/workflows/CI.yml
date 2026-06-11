@@ -46,5 +46,5 @@ jobs:
 
       # Pack
       - name: Pack
-        run: dotnet pack --configuration Release --no-build
+        run: dotnet pack BlazorLocalStorageManager.slnx --configuration Release --no-build
 
