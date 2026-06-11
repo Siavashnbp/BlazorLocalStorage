@@ -10,9 +10,13 @@
 		<Description>A Blazor library for managing local storage in web applications.</Description>
 		<PackageTags>blazor;localstorage;sessionstorage</PackageTags>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryUrl>
 			https://github.com/Siavashnbp/BlazorLocalStorage
 		</RepositoryUrl>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
