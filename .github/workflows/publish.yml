@@ -13,7 +13,13 @@ jobs:
       contents: read
 
     steps:
-    
+
+      - name: NuGet Login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: Siavash_nabipour
+          
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -29,13 +35,7 @@ jobs:
         run: dotnet build BlazorLocalStorageManager.slnx -c Release --no-restore
 
       - name: Pack
-        run: dotnet pack BlazorLocalStorageManager.slnx -c Release --no-build
-
-      - name: NuGet Login
-        uses: NuGet/login@v1
-        id: login
-        with:
-          user: Siavash_nabipour
+        run: dotnet pack BlazorLocalStorageManager.slnx -c Release --no-build      
 
       - name: Publish
         run: dotnet nuget push "**/*.nupkg" --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
